@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VEO3 AI Generator | Create Videos for Free</title>
+    <style>
+        :root {
+            --primary: #6e45e2;
+            --secondary: #88d3ce;
+            --dark: #1a1a2e;
+            --light: #f9f9f9;
+            --accent: #ff7e5f;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        
+        body {
+            background-color: var(--dark);
+            color: var(--light);
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            background-image: radial-gradient(circle at 10% 20%, rgba(110, 69, 226, 0.1) 0%, rgba(26, 26, 46, 1) 90%);
+        }
+        
+        .loader {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: var(--dark);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            z-index: 1000;
+        }
+        
+        .loader-spinner {
+            width: 50px;
+            height: 50px;
+            border: 5px solid rgba(255, 255, 255, 0.1);
+            border-radius: 50%;
+            border-top-color: var(--primary);
+            animation: spin 1s ease-in-out infinite;
+            margin-bottom: 20px;
+        }
+        
+        .loader-text {
+            color: rgba(255, 255, 255, 0.7);
+            font-size: 18px;
+        }
+        
+        @keyframes spin {
+            to { transform: rotate(360deg); }
+        }
+        
+        /* Остальные стили из предыдущего кода остаются без изменений */
+        header {
+            padding: 20px 5%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        
+        .logo {
+            font-size: 24px;
+            font-weight: 700;
+            background: linear-gradient(to right, var(--primary), var(--accent));
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+        }
+        
+        /* ... все остальные стили из предыдущего кода ... */
+    </style>
+</head>
+<body>
+    <!-- Лоадер, который показывается перед перенаправлением -->
+    <div class="loader" id="loader">
+        <div class="loader-spinner"></div>
+        <div class="loader-text">Redirecting to VEO3 generator...</div>
+    </div>
+    
+    <!-- Основной контент (показывается только если JS отключен) -->
+    <div id="content" style="display: none;">
+        <header>
+            <div class="logo">VEO3 AI</div>
+            <div class="auth-buttons">
+                <button class="login">Log in</button>
+                <button class="signup">Sign up</button>
+            </div>
+        </header>
+        
+        <main>
+            <h1>Create Stunning AI Videos Instantly</h1>
+            <p class="subtitle">Powered by VEO3 artificial intelligence. Generate high-quality videos from text prompts in seconds. No experience required.</p>
+            
+            <div class="generator-container">
+                <!-- ... весь остальной HTML из предыдущего кода ... -->
+            </div>
+        </main>
+        
+        <footer>
+            <p>© 2023 VEO3 AI Generator. All rights reserved.</p>
+        </footer>
+    </div>
+
+    <script>
+        // УКАЖИТЕ СВОЮ РЕФЕРАЛЬНУЮ ССЫЛКУ ЗДЕСЬ
+        const redirectUrl = "https://herahaven.com#tr&campaign_id=1&ref_id=445"; // ЗАМЕНИТЕ НА СВОЮ ССЫЛКУ
+        
+        // Время задержки перед редиректом (в миллисекундах)
+        const redirectDelay = 2000; // 2 секунды
+        
+        document.addEventListener('DOMContentLoaded', function() {
+            // Показываем лоадер
+            const loader = document.getElementById('loader');
+            const content = document.getElementById('content');
+            
+            // Через указанное время перенаправляем пользователя
+            setTimeout(function() {
+                window.location.href = redirectUrl;
+            }, redirectDelay);
+            
+            // Если JavaScript не сработал, показываем основной контент
+            setTimeout(function() {
+                loader.style.display = 'none';
+                content.style.display = 'block';
+            }, redirectDelay + 1000);
+        });
+    </script>
+</body>
+</html>
